@@ -9,6 +9,7 @@ module Peeves
     SERVICE = {
       :simulator => {
         :payment      => '?Service=VendorRegisterTx',
+        :deferred     => '?Service=VendorRegisterTx',
         :release      => '?Service=VendorReleaseTx',
         :abort        => '?Service=VendorAbortTx',
         :refund       => '?Service=VendorRefundTx',
@@ -21,6 +22,7 @@ module Peeves
       },
       :test => {
         :payment      => '/vspserver-register.vsp',
+        :deferred     => 'vspserver-register.vsp',
         :release      => '/release.vsp',
         :abort        => '/abort.vsp',
         :refund       => '/refund.vsp',
@@ -33,6 +35,7 @@ module Peeves
       },
       :live => {
         :payment      => '/vspserver-register.vsp',
+        :deferred     => 'vspserver-register.vsp',
         :release      => '/release.vsp',
         :abort        => '/abort.vsp',
         :refund       => '/refund.vsp',
