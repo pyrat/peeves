@@ -279,6 +279,10 @@ class PeevesGateway
     Peeves::ProtxResponse.new(params).verify!
   end
   
+  def self.parse_callback(params)
+    Peeves::ProtxCallback.new(params).verify!
+  end
+  
   def self.response(status, redirect_url, status_detail)
     "Status=#{status}\r\n" +
     "RedirectURL=#{redirect_url}\r\n" +
