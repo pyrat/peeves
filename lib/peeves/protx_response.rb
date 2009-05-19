@@ -1,3 +1,4 @@
+require 'cgi'
 module Peeves
   class ProtxResponse
     def initialize(response)
@@ -33,7 +34,7 @@ module Peeves
     end
     
     def []=(key, value)
-      self.send("#{mapping[key] || key}=", value)
+      self.send("#{mapping[key] || key}=", CGI.unescape(value))
     end
     
     def [](key)
