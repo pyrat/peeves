@@ -40,10 +40,11 @@ module Peeves
     def [](key)
       self.send("#{mapping[key] || key}")
     end
-
+    
+    
+    # TODO: Make this work, currently fails all
     def verify!
-      return self
-      # TODO: Make this work, currently fails all
+      # return self
       md5 = Digest::MD5.new
       md5 << "#{self.vps_transaction_id}#{self.transaction_reference}#{self.status}#{self.transaction_authorisation_number}" +
       "#{Peeves::Config.vendor}#{self.avs_cv2_result}#{self.security_key}#{self.address_result}#{self.post_code_result}" +
