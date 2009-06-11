@@ -18,11 +18,16 @@ module Peeves
     end
     
     def failed?
-      PeevesGateway::FAILURES.include?(self.status)
+      PeevesGateway::FAILURES.include?(self.status.to_sym)
     end
     
     def error?
-      self.status = PeevesGateway::ERROR
+      PeevesGateway::ERRORS.include?(self.status.to_sym)
+    end
+    
+    # Generic status checker method
+    def st(status_check)
+      status_check.to_sym == self.status.to_sym
     end
     
   end

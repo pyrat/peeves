@@ -10,6 +10,10 @@ class PeevesGateway
   REJECTED  = 'REJECTED'
   ERROR     = 'ERROR'
   
+  FAILURES = [:NOTAUTHED, :ABORT, :REJECTED]
+  ERRORS = [:INVALID, :ERROR]
+  
+  
   VPS_PROTOCOL = "2.23"
   
   TRANSACTIONS = {
