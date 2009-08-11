@@ -353,7 +353,7 @@ private
       @post["BillingCity"]        = options[:billing].city
       @post["BillingPostCode"]    = options[:billing].post_code
       @post["BillingCountry"]     = options[:billing].country
-      @post["BillingPhone"]       = options[:billing].telephone
+      @post["BillingPhone"]       = options[:billing].phone
     end
   end
 
@@ -367,7 +367,7 @@ private
       @post["DeliveryCity"]        = options[:delivery].city
       @post["DeliveryPostCode"]    = options[:delivery].post_code
       @post["DeliveryCountry"]     = options[:delivery].country
-      @post["DeliveryPhone"]       = options[:delivery].telephone
+      @post["DeliveryPhone"]       = options[:delivery].phone
     end
   end
   
