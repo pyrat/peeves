@@ -27,7 +27,7 @@ module Peeves
     
     # Generic status checker method
     def st(status_check)
-      status_check.to_sym == self.status.to_sym
+      status_check.to_s == self.status.to_s
     end
     
   end
